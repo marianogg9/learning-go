@@ -32,8 +32,8 @@ func main() {
 	for _, f := range files {
 		if f.Size() == 0 { // get all empty files (size == 0)
 			name := f.Name()
-			fmt.Println(name) // print their names
-			names = append(names, name...)
+			fmt.Println(name)              // print their names
+			names = append(names, name...) // append each file name to a []byte slice so ioutil.WriteFile() can be used later (it only works with byte slices)
 			names = append(names, '\n')
 		}
 	}
