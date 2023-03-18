@@ -8,8 +8,8 @@ import (
 
 func main() {
 	q := os.Args[1]
-	i, err := strconv.ParseUint(q, 10)
-	if err == nil && isPrime(i) {
+	i, err := strconv.ParseUint(q, 10, 10)
+	if err == nil && isPrime(int(i)) {
 		fmt.Printf("%v is prime\n", q)
 	} else {
 		fmt.Printf("is not\n")
