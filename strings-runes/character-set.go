@@ -28,4 +28,6 @@ func main() {
 	for n := start; n <= stop; n++ {
 		fmt.Printf("%-10c %-10[1]d %-10[1]x % -10x\n", n, string(n)) // c prints a char by the given code point, d is decimal, x hexa
 	}
+
+	fmt.Println(string(103), string(111))
 }
